@@ -90,4 +90,4 @@ if __name__ == '__main__':
     start_time = time.time()
     split('videos/video_1.mp4')
     save_subtitles(stt("audio/video_1_mp4_chunked/"))
-    print("time: ", time.time() - start_time, 's')
+    print("Elapsed Time: ", time.time() - start_time, 's')

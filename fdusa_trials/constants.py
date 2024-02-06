@@ -1,5 +1,5 @@
-VIDEO_DIR = './videos'
-AUDIO_DIR = './audio'
+VIDEO_DIR = 'videos'
+AUDIO_DIR = 'audio'
 
 WHISPER_MODEL = 'base'
 

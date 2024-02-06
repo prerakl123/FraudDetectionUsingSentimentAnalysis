@@ -4,7 +4,6 @@ import whisper
 from moviepy.audio.fx.volumex import volumex
 from moviepy.editor import VideoFileClip, AudioFileClip
 from constants import VIDEO_DIR, AUDIO_DIR, WHISPER_MODEL
-my_va = __import__("my-voice-analysis")
 
 whisper_model = whisper.load_model(WHISPER_MODEL)
 
