@@ -1,3 +1,5 @@
+import json
+
 import whisper
 from moviepy.editor import *
 
@@ -85,9 +87,25 @@ def stt(base_path_to_saved_files):
     return final_list_of_text
 
 
+def get_transcript_from_chunks(subtitle_file):
+    text_list = []
+
+    with open(subtitle_file, 'r') as sf:
+        subtitles = sf.readlines()
+        sf.close()
+
+    for line in subtitles:
+        text_list.append(
+            line.split("'text': ")[1].split(", 'tokens'")[0].lstrip("'").lstrip('"').rstrip('"').rstrip("'")
+        )
+
+    return "".join(text_list)
+
+
 if __name__ == '__main__':
-    import time
-    start_time = time.time()
-    split('videos/video_1.mp4')
-    save_subtitles(stt("audio/video_1_mp4_chunked/"))
-    print("Elapsed Time: ", time.time() - start_time, 's')
+    # import time
+    # start_time = time.time()
+    # split('videos/video_1.mp4')
+    # save_subtitles(stt("audio/video_1_mp4_chunked/"))
+    # print("Elapsed Time: ", time.time() - start_time, 's')
+    print(get_transcript_from_chunks("audio/video_1_mp4_chunked/subtitles.txt"))
