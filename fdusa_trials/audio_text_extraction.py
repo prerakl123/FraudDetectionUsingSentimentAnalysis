@@ -3,7 +3,8 @@ import json
 import whisper
 from moviepy.editor import *
 
-whisper_model = whisper.load_model("base", device='cpu')
+whisper_model = whisper.load_model("base", device='cuda')
+v = 1
 
 
 def split(video_path):
@@ -103,9 +104,9 @@ def get_transcript_from_chunks(subtitle_file):
 
 
 if __name__ == '__main__':
-    # import time
-    # start_time = time.time()
-    # split('videos/video_1.mp4')
-    # save_subtitles(stt("audio/video_1_mp4_chunked/"))
-    # print("Elapsed Time: ", time.time() - start_time, 's')
+    import time
+    start_time = time.time()
+    split('videos/video_1.mp4')
+    save_subtitles(stt("audio/video_1_mp4_chunked/"))
+    print("Elapsed Time: ", time.time() - start_time, 's')
     print(get_transcript_from_chunks("audio/video_1_mp4_chunked/subtitles.txt"))

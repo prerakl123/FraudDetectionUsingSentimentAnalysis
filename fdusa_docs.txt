@@ -1,0 +1,272 @@
+%==== Fraud Detection Using Sentiment Analysis ====%
+
+---- DOCS ----
+
+⟨ Video Frame Extraction ⟩
+* DeepFace Face and Emotion Extraction *:
+	<< Run 2 threads >>:
+		1. Main thread - The main thread involves iterating through and generating
+		   emotional analysis on each frame.
+		2. Secondary Thread - The secondary thread saves the generated emotional
+		   inference data to a JSON file.
+
+	<< Main Thread Breakdown (algo) >>:
+		start_time := time at which process starts (for elapsed time)
+
+		video_capture := initialize the video file with opencv's `VideoCapture`
+		frame_count := total frames in the video
+
+		while vc.isOpened() :=
+			ret, frame = video_capture.read()
+
+			# Here we use the opencv's generator object to iterate through frames
+			# When the `VideoCapture.read()` is called the next frame in the
+			# generator iterator is returned by `VideoCapture`. After verifying
+			# the frame we increment the `total_frames` counter by 1.
+
+			# The frame is passed to the `DeepFace` module's `extract_faces()`
+			# function which extracts all the detected faces. The list returned
+			# contains:
+			# "face" (np.ndarray):
+			#    The detected face as a NumPy array.
+			# "facial_area" (List[float]):
+			#    The detected face's regions represented as a list of floats.
+			# "confidence" (float):
+			#    The confidence score associated with the detected face.
+
+			# Initialize the `unique_faces` dictionary from the first frame by
+			# getting all the available faces from the initial extraction. Append
+			# the images to the `unique_faces_images`. Save the unique images to
+			# the `unique_faces` directory as "unique_faces/person - {i}.jpg"
+			# for each "i"th unique person.
+
+			For i, face in each frame (with extracted faces) :=
+				For img in `unique_faces_images` :=
+					face_verify := Verify if the extracted face matches with the `img`
+
+					if face_verify is True :=
+						emotions := Analyse emotions for the `face`
+
+						unique_faces[i]['frames'].append({
+							"emotions" := dict containing emotion analysis,
+							"frame_index" := the current frame number
+						})
+						break
+
+				If the face is not matched in the list of unique faces :=
+					# Create a new index value in the `unique_faces` dict and
+					# initialize the dict. Append the newly detected face to the
+					# `unique_faces_images` list.
+
+					emotions := Analyse emotions for the `face`
+
+					unique_faces[new_index]['frames'].append({
+						"emotions" := dict containing emotion analysis,
+						"frame_index" := current frame number
+					})
+
+					# Save the newly detected face to the `unique_faces` directory
+
+		# Release the video_capture generator
+		# Destroy all windows (if created) by opencv
+		# Print the total elapsed time : time.time() - start_time
+
+	<< Directory Structure >>:
+		fdusa/
+		│
+		├── videos/
+		│   ├── video_1.mp4
+		│   ├── ...
+		│   └── video_n.mp4
+		│
+		├── video_analysis/
+		│   ├── "{original_video_name_1} - {timestamp}"/
+		│   │    ├── unique_faces/
+		│   │    │   ├── person - 0.jpg
+		│   │    │   ├── ...
+		│   │    │   └── person - n.jpg
+		│   │    │
+		│   │    └── video_analysis.json
+		│   │
+		│   ├── "{original_video_name_2} - {timestamp}"/
+		│   │    ├── unique_faces/
+		│   │    │   ├── person - 0.jpg
+		│   │    │   ├── ...
+		│   │    │   └── person - n.jpg
+		│   │    │
+		│   │    └── video_analysis.json
+		│   │
+		│   └── "{original_video_name_n} - {timestamp}"/
+		│        ├── unique_faces/
+		│        │   ├── person - 0.jpg
+		│        │   ├── ...
+		│        │   └── person - n.jpg
+		│        │
+		│        └── video_analysis.json
+		│
+		└── video_extraction.py
+
+	<< Video Analysis JSON breakdown >>
+		{
+			"0": {
+				"count": <The total count of frames in which the person with ID: 0 appeared>
+				"frames": [
+					{
+						"emotions": {
+							"emotion": {
+								"angry": <confidence score>,
+								... +6 more emotions
+							},
+							"dominant_emotion": <dominant emotion>,
+							"region": {x, y, w, h},
+							"face_confidence": <face confidence>
+						},
+						"frame_index": <frame number for which the analysis has been done>
+					},
+
+					{
+						... (similar analysis as above but with different frame indexes
+					},
+
+					...
+				]
+			},
+
+			"1": {
+				... (similar to the above structure but for the person with ID: 1)
+			}
+			...
+
+			"n": {
+				... (similar structure as in the 0th person's dict)
+			}
+		}
+
+	<< Secondary Thread Breakdown >>:
+		# Update the video_analysis JSON file every 5 seconds and print the total
+		# frames processed / total frames present
+
+
+
+⟨ Audio Extraction ⟩
+* Speech To Text *
+	# Load and initialise the whisper model with device as `CUDA` (or GPU)
+		whisper_model := WhisperModel(name="base", device="CUDA")
+
+
+	<< Initializing Audio Files >>
+		# Extract the audio from the inputted video using the `AudioFileClip` class
+		# of `movipy.editor` module and get the total absolute duration of the clip
+		audio_clip := AudioFileClip(<video_file_path>)
+
+		# Since the whisper model can't operate on long audio clips with pauses
+		# between human speech divide the audio clip into `n` parts of 60 seconds
+		# each to avoid the errors
+		while True :=
+			audio_clip = AudioFileClip(<video_file_path>)
+
+			# Check if current duration level is greater than the total duration
+			if interval >= n :=
+				exit
+				interval := n
+
+			# Make a subclip and save it
+			temp = audio_clip.subclip(start, interval)
+			temp_file_saving_location = "audio_clips/<original_video_name>_chunked - <timestamp>/clip - <counter>.mp3"
+			temp.write_audiofile(temp_file_saving_location)
+
+			# Close the clip files
+			temp.close()
+			audio_clip.close()
+
+			# Increase the counters and set intervals
+			counter += 1
+			start = interval
+
+			# Check if exit flag is True
+			if flag_to_exit is True:
+				break
+
+			interval += 60
+
+	<< Transcription >>
+		list_of_files := List of saved audio file names
+
+		For index in range of length(list_of_file) - 1:
+			# Get the `index`th chunk for clip duration
+			audio_clip := AudioFileClip(<chunk audio file path>)
+
+			# Transcribe audio file
+			whisper_model.transcribe(<chunk audio file path>)
+
+			# Get each line of text transcribed by the whisper model and append them
+			# in a list `list_of_text`. Save the extracted text with their `id`,
+			# `start_time`, `end_time` and other metadata
+
+			# The longer pauses in the speech result in a new sentence or question with
+			# a fullstop or question mark respectively, according to the type of sentence
+			# The shorter pauses result in commas. This creates the perfect subtitles
+			# for the audio file.
+
+	<< Directory Structure >>:
+		fdusa/
+		│
+		├── audio_clips/
+		│   ├── "{original_video_name_1}_chunked - {timestamp}"/
+		│   │    ├── clip - 0.mp3
+		│   │    ├── ...
+		│   │    ├── clip - n.mp3
+		│   │    └── subtitles.txt
+		│   │
+		│   ├── "{original_video_name_2}_chunked - {timestamp}"/
+		│   │    ├── clip - 0.mp3
+		│   │    ├── ...
+		│   │    ├── clip - n.mp3
+		│   │    └── subtitles.txt
+		│   │
+		│   └── "{original_video_name_n}_chunked - {timestamp}"/
+		│        ├── clip - 0.mp3
+		│        ├── ...
+		│        ├── clip - n.mp3
+		│        └── subtitles.txt
+		│
+		└── audio_extraction.py
+
+	<< Subtitles File Breakdown >>
+		# Each line contains the subscript and corresponding metadata for a particular
+		# chunk of speech transcribed. Here is the format of each line in the
+		# subtitles file:
+
+		{
+			"id": <id>,
+			"start": <start>,
+			"end": <end>,
+			"text": <text>,
+			"duration": <duration>
+
+			# Other metadata that might not be needed
+			"tokens": <tokens>,                        # Embedding tokens
+			"temperature": <temperature>,              # Degree of randomness
+			"avg_logprob": <avg_logprob>               # Segment-level confidence
+			"compression_ratio": <compression_ratio>
+			"no_speech_prob": <no_speech_prob>         # No-Speech confidence
+		}
+
+
+* Diarization *
+	# Create the Audio file using `AudioFileClip` class of `moviepy.audio.io.AudioFileClip`
+	clip := AudioFileClip(<path>)
+	clip.write_audiofile(<audio_file_path>)
+
+	pipeline := Pipeline.from_pretrained("pyannote/speaker-diarization-3.1", <HuggingFace Token>)
+
+	# Send pipeline to GPU
+	pipeline.to(torch.device("CUDA"))
+
+	# Run the diarization of pipeline
+	diarization := pipeline(<audio_file_path>)
+
+	# Save the returned diarized output by iterating through the tracks
+	For turn, _, speaker in diarization itertracks :=
+		# Here speaker is the speaker ID of the individual speaker for the duration of (start, end)
+		print(turn.start, turn.end, speaker)

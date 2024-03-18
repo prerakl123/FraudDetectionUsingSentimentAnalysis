@@ -1,9 +1,0 @@
-JSON based DB -> {
-	"app_metadata": {},
-	"folder_details": {
-		"video_dir_path": "",
-		"audio_dir_path": "",
-		"sliced_audio_dir_path": "",
-		"sliced_audio_dir_metadata": "",
-		"saved_images_dir_path": "",
-	}

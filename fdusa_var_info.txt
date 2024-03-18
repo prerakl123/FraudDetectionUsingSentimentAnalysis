@@ -1,0 +1,30 @@
+List of variables:
+1. Video:
+	- person_id
+	- emotion confidence
+		-- angry
+		-- disgust
+		-- fear
+		-- happy
+		-- sad
+		-- surprise
+		-- neutral
+	- dominant emotion
+	- region of face   // (x, y, width, height)
+	- frame_indexes    // list of frames in which user appears
+
+
+2. Audio
+	- start time
+	- end time
+	- speaker id    // Unique for each different kind of speaker
+
+
+3. Speech to Text
+	- start time
+	- end time
+	- text
+
+
+4. Text (from the transcribed text):
+	-

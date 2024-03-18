@@ -22,18 +22,20 @@ sentiment_analysis_michelle = pipeline(
     truncation=True
 )
 sentiment_analysis_samlowe = pipeline(
-    task="sentiment-analysis",
+    task="text-classification",
     framework="pt",
     model="SamLowe/roberta-base-go_emotions",
     device="cuda",
     max_length=512,
-    truncation=True
+    truncation=True,
+    top_k=None
 )
 analyzer = SentimentIntensityAnalyzer()
 
 
 def analyze_sentiment_michelle(text):
     results = sentiment_analysis_michelle(text)
+    print(results)
     sentiment_results = {
         result['label']: result['score'] for result in results
     }
@@ -42,8 +44,9 @@ def analyze_sentiment_michelle(text):
 
 def analyze_sentiment_samlowe(text):
     results = sentiment_analysis_samlowe(text)
+    print(results)
     sentiment_results = {
-        result['label']: result['score'] for result in results
+        result['label']: result['score'] for result in results[0]
     }
     return sentiment_results
 

@@ -184,110 +184,156 @@
 from deepface import DeepFace
 import cv2
 import json
+import threading
+import time
 
-
-def update_dictionary(filename, new_dict):
-    with open(filename, 'w') as f:
-        json.dump(new_dict, f, indent=4)
-    f.close()
-
-
-vc = cv2.VideoCapture('../videos/video_2.mp4')
-frame_count = int(vc.get(cv2.CAP_PROP_FRAME_COUNT))
-print("TOTAL FRAMES:", frame_count)
-
-backend = 'opencv'
-total_frames = 0
+is_running = True
 unique_faces = {}
 unique_face_images = []
+backend = 'retinaface'
+total_frames = 0
+frame_count = 0
+VIDEO_DIR = "../videos"
+VIDEO_FILE = 'video_7.mp4'
+VIDEO_ANALYSIS_DIR = "./video_analysis"
+JSON_PICS_DIR = 'video_analysis/json_pics_video_7'
 
-while vc.isOpened():
-    ret, frame = vc.read()
-    if not ret:
-        break
 
-    total_frames += 1
+def update_dictionary(filename=f'{VIDEO_ANALYSIS_DIR}/{VIDEO_FILE.split(".")[0]}_analysis.json'):
+    global is_running, unique_faces
 
-    # print(total_frames)
-    face_objs = DeepFace.extract_faces(img_path=frame, detector_backend=backend, enforce_detection=False)
+    while is_running:
+        with open(filename, 'w') as f:
+            json.dump(unique_faces, f, indent=4)
+        f.close()
+        print(total_frames, '|', frame_count)
+        time.sleep(5)
 
-    if len(unique_faces) == 0:
-        unique_faces = {
-            i: {
-                "count": 1,
-                "frames": []
-            } for i in range(len(face_objs))
-        }
-        unique_face_images = [(face['face']*255)[:, :, ::-1] for face in face_objs]
 
-        for i, img_data in enumerate(unique_face_images):
-            cv2.imwrite(f'./video_analysis/json_pics/person - {i}.jpg', img_data)
-    else:
-        for i, face in enumerate(face_objs):
-            matched = False
-            face_rgb = face['face']
-            face_rgb *= 255
-            face_rgb = face_rgb[:, :, ::-1]
+def run():
+    start_time = time.time()
+    global unique_faces, unique_face_images, is_running, backend, total_frames, frame_count
 
-            for img in unique_face_images:
-                face_verify = DeepFace.verify(
-                    face_rgb, img,
-                    detector_backend=backend,
-                    enforce_detection=False
-                )
+    vc = cv2.VideoCapture(f"{VIDEO_DIR}/{VIDEO_FILE}")
+    frame_count = int(vc.get(cv2.CAP_PROP_FRAME_COUNT))
+    print("TOTAL FRAMES:", frame_count)
 
-                if face_verify['verified']:
-                    matched = True
-                    unique_faces[i]['count'] += 1
-                    emotions = DeepFace.analyze(
-                        face_rgb,
-                        actions=['emotion'],
-                        enforce_detection=False,
-                        detector_backend=backend
-                    )
-                    unique_faces[i]['frames'].append({
-                        'emotions': emotions[0],
-                        'frame_index': total_frames
-                    })
-                    break
+    while vc.isOpened():
+        ret, frame = vc.read()
+        if not ret:
+            is_running = False
+            break
 
-            if not matched:
-                new_ind = len(unique_faces)
+        total_frames += 1
 
-                unique_faces[new_ind] = {
-                    'count': 1,
-                    'frames': []
+        try:
+            # print(total_frames)
+            face_objs = DeepFace.extract_faces(img_path=frame, detector_backend=backend, enforce_detection=False)
+            print(face_objs[0]['facial_area'])
+            for face in face_objs:
+                x = face['facial_area']['x']
+                y = face['facial_area']['y']
+                w = face['facial_area']['w']
+                h = face['facial_area']['h']
+                cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 1)
+
+            cv2.imshow('frame', frame)
+            if cv2.waitKey(5) == ord('q'):
+                break
+
+            if len(unique_faces) == 0:
+                unique_faces = {
+                    i: {
+                        "count": 1,
+                        "frames": []
+                    } for i in range(len(face_objs))
                 }
-                unique_face_images.append(face_rgb)
+                unique_face_images = [(face['face']*255)[:, :, ::-1] for face in face_objs]
 
-                emotions = DeepFace.analyze(
-                    face_rgb,
-                    actions=['emotion'],
-                    enforce_detection=False,
-                    detector_backend=backend
-                )
-                unique_faces[new_ind]['frames'].append({
-                    'emotions': emotions[0],
-                    'frame_index': total_frames
-                })
-                cv2.imwrite(f'./video_analysis/json_pics/person - {new_ind}.jpg', unique_face_images[new_ind])
-            update_dictionary('./video_analysis/video_2_analysis.json', unique_faces)
+                for i, img_data in enumerate(unique_face_images):
+                    cv2.imwrite(f'{JSON_PICS_DIR}/person - {i}.jpg', img_data)
+            else:
+                for i, face in enumerate(face_objs):
+                    matched = False
+                    face_rgb = face['face']
+                    face_rgb *= 255
+                    face_rgb = face_rgb[:, :, ::-1]
 
-        # cv2.rectangle(
-        #     frame,
-        #     (
-        #         face['facial_area']['x'],
-        #         face['facial_area']['y']
-        #     ),
-        #     (
-        #         face['facial_area']['x'] + face['facial_area']['w'],
-        #         face['facial_area']['y'] + face['facial_area']['h']
-        #     ),
-        #     color=(0, 0, 255),
-        #     thickness=1
-        # )
-    # cv2.imwrite(f'video_analysis/output_frames/img - {tf}.jpg', frame)
+                    for img in unique_face_images:
+                        try:
+                            face_verify = DeepFace.verify(
+                                face_rgb, img,
+                                detector_backend=backend,
+                                enforce_detection=False
+                            )
+
+                            if face_verify['verified']:
+                                print(face_verify['verified'])
+                                matched = True
+                                unique_faces[i]['count'] += 1
+                                emotions = DeepFace.analyze(
+                                    face_rgb,
+                                    actions=['emotion'],
+                                    enforce_detection=True,
+                                    detector_backend=backend
+                                )
+                                unique_faces[i]['frames'].append({
+                                    'emotions': emotions[0],
+                                    'frame_index': total_frames
+                                })
+                                break
+                        except ValueError:
+                            print(
+                                "No face detected in frame:",
+                                total_frames,
+                                "for the unique face index:",
+                                unique_face_images.index(img)
+                            )
+                            continue
+
+                    if not matched:
+                        new_ind = len(unique_faces)
+
+                        unique_faces[new_ind] = {
+                            'count': 1,
+                            'frames': []
+                        }
+                        unique_face_images.append(face_rgb)
+
+                        try:
+                            emotions = DeepFace.analyze(
+                                face_rgb,
+                                actions=['emotion'],
+                                enforce_detection=True,
+                                detector_backend=backend
+                            )
+                            unique_faces[new_ind]['frames'].append({
+                                'emotions': emotions[0],
+                                'frame_index': total_frames
+                            })
+                            cv2.imwrite(f'{JSON_PICS_DIR}/person - {new_ind}.jpg', unique_face_images[new_ind])
+                        except ValueError:
+                            print("No faces matched and detected.")
+                            continue
+        except ValueError:
+            print("No face detected in frame:", total_frames)
+            continue
+
+    is_running = False
+    vc.release()
+    cv2.destroyAllWindows()
+    print("Total Time Elapsed: %.2f mins" % ((time.time() - start_time) / 60))
 
 
-vc.release()
-cv2.destroyAllWindows()
+if __name__ == '__main__':
+    s = [
+        threading.Thread(target=run, name="p1"),
+        threading.Thread(target=update_dictionary, name="p2")
+    ]
+
+    for animal in s:
+        animal.start()
+        print(animal.name)
+
+    for animal in s:
+        animal.join()
