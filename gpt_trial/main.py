@@ -46,3 +46,54 @@ def get_audio_meta(video_file_path: Path) -> dict:
         "length": dur
     }
 
+
+def get_durations(
+        video_file_path: Path = None,
+        audio_meta=None,
+        hgf_token=None,
+        hgf_model=None,
+        cuda=False
+):
+    if audio_meta is None:
+        audio_meta = get_audio_meta(video_file_path)
+
+    if hgf_token is None:
+        hgf_token = HGF_TOKEN
+
+    if hgf_model is None:
+        hgf_model = PRETRAINED_MODEL_NAME
+
+    print("Initializing model:", hgf_model)
+    pipeline = Pipeline.from_pretrained(hgf_model, use_auth_token=hgf_token)
+
+    if cuda:
+        print("Setting CUDA=1.", file=sys.stderr, end=' ')
+        pipeline.to(torch.device('cuda'))
+        print("Using device:", torch.cuda.get_device_name(), file=sys.stderr)
+
+    print("Running Diarization...", end=' ')
+    diar = pipeline(audio_meta['path'].as_posix())
+    print('Done.')
+
+    return {
+        **audio_meta,
+        # "path": audio_meta['path'],
+        # "length": audio_meta['length'],
+        "durations": [
+            (turn.start, turn.end) for turn, _ in diar.itertracks(yield_label=False)
+        ]
+    }
+
+
+def get_subclips(audio_file_path: Path, durations: list) -> list:
+    audio_dir = audio_file_path.absolute().parent
+    subclips = []
+
+    clip = AudioFileClip(audio_file_path)
+    for i, time in enumerate(durations):
+        subclip_name = audio_dir / f'subclip_{i}.wav'
+        clip.subclip(time[0], time[1]).write_audiofile(subclip_name)
+        subclips.append((time[0], time[1], subclip_name))
+
+    return subclips
+
