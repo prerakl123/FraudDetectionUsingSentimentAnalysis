@@ -97,3 +97,9 @@ def get_subclips(audio_file_path: Path, durations: list) -> list:
 
     return subclips
 
+
+if __name__ == '__main__':
+    from pprint import pprint
+
+    path = Path('../videos/video_7.mp4').resolve()
+    pprint(get_durations(path, cuda=True))
