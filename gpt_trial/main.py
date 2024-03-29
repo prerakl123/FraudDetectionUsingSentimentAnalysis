@@ -98,6 +98,44 @@ def get_subclips(audio_file_path: Path, durations: list) -> list:
     return subclips
 
 
+def get_transcripts(
+        audio_file_path: Path = None,
+        video_file_path: Path = None,
+        durations: list[tuple[float, float]] = None,
+        whisper_model=None,
+        cuda=False
+):
+    if durations is None:
+        print("Durations not provided. Getting durations...", file=sys.stderr)
+
+        if video_file_path is not None:
+            audio_file_path, length, durations = get_durations(video_file_path=video_file_path, cuda=cuda).values()
+
+    if whisper_model is None:
+        print("Using default whisper model:", WHISPER_MODEL, file=sys.stderr)
+        whisper_model = WHISPER_MODEL
+
+    if cuda:
+        print("Setting CUDA=1.", file=sys.stderr, end=' ')
+        model = whisper.load_model(whisper_model, device='cuda')
+        print("Using device:", torch.cuda.get_device_name(), file=sys.stderr)
+    else:
+        model = whisper.load_model(whisper_model, device='cpu')
+        print('Whisper model running on CPU.', file=sys.stderr)
+
+    print("Creating Subclips...", end=' ')
+    subclips = get_subclips(audio_file_path, durations)
+    print('Done.')
+
+    transcriptions: list = []
+
+    print("Transcribing text...", end=' ')
+    for start, end, subclip_name in subclips:
+        transcript = model.transcribe(subclip_name)['text']
+        transcriptions.append((start, end, transcript))
+    print("Done.")
+
+
 if __name__ == '__main__':
     from pprint import pprint
 
