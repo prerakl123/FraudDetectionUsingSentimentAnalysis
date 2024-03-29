@@ -27,3 +27,22 @@ def make_dir(dirname: Path = None):
             print(f"Creating {dirname.name}...", file=sys.stderr, end=' ')
             os.makedirs(dirname, exist_ok=True)
             print('Done.')
+
+
+def get_audio_meta(video_file_path: Path) -> dict:
+    audio_clips_dir = audio_clips_path / video_file_path.name.replace('.', '_')
+    audio_clip_name = audio_clips_dir / "audio.wav"
+    make_dir(audio_clips_dir)
+
+    print('Extracting Audio from:', video_file_path.as_posix())
+    clip = AudioFileClip(video_file_path.as_posix())
+    clip.write_audiofile(audio_clip_name.as_posix())
+    dur = clip.duration
+    clip.close()
+    print("Saved audio to:", audio_clip_name.as_posix())
+
+    return {
+        "path": audio_clip_name,
+        "length": dur
+    }
+
