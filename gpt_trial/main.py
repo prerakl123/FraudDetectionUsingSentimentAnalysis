@@ -2,6 +2,8 @@ import os
 import sys
 from pathlib import Path
 
+import google.generativeai as genai
+import openai
 import torch
 import whisper
 from moviepy.audio.io.AudioFileClip import AudioFileClip
@@ -12,6 +14,44 @@ PRETRAINED_MODEL_NAME = "pyannote/speaker-diarization-3.1"
 audio_clips_path = Path('./audio_clips').resolve()
 
 WHISPER_MODEL = 'base'
+WHISPER_MODEL = 'large'
+
+GEMINI_API_KEY = 'AIzaSyBhgicqSBzKJZPIQA2w-ahp_7YACYCNBVM'
+OPENAI_API_KEY = ''
+
+CONV_GEN_CONTEXT = open('conv_gen_context.txt', 'r').read()
+SCORE_GEN_CONTEXT = open('score_gen_context.txt', 'r').read()
+TRANSCRIPT_FORMAT = '{start_time}->{end_time} = "{text}"'
+
+SAFETY_SETTINGS = [
+    {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_ONLY_HIGH"
+    },
+    {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_ONLY_HIGH"
+    },
+    {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_ONLY_HIGH"
+    },
+    {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_ONLY_HIGH"
+    }
+]
+GEMINI_GENERATION_CONFIG = {
+    "temperature": 0.7,
+    "top_p": 1,
+    "top_k": 1
+}
+genai.configure(api_key=GEMINI_API_KEY)
+MODEL_GEMINI = genai.GenerativeModel(
+    model_name='gemini-1.0-pro',
+    generation_config=genai.GenerationConfig(**GEMINI_GENERATION_CONFIG),
+    safety_settings=SAFETY_SETTINGS
+)
 
 
 def make_dir(dirname: Path = None):
@@ -131,9 +171,14 @@ def get_transcripts(
 
     print("Transcribing text...", end=' ')
     for start, end, subclip_name in subclips:
-        transcript = model.transcribe(subclip_name)['text']
-        transcriptions.append((start, end, transcript))
-    print("Done.")
+        print(f"Transcribing...: {subclip_name.as_posix()}.", file=sys.stderr, end=' ')
+        transcript = model.transcribe(subclip_name.as_posix())
+        transcriptions.append((start, end, transcript['text']))
+        print("Done.", file=sys.stderr)
+
+    return transcriptions
+
+
 def get_convo_prompt(transcripts, **kwargs):
     print("Generating prompt...", end=" ")
 
@@ -156,6 +201,49 @@ def get_convo_prompt(transcripts, **kwargs):
         lines=len(transcript_list) + len(kw_str_list)
     ))
     return CONV_GEN_CONTEXT.format(audio_transcript_data=audio_transcript_data, extra_kws=extra_kws)
+
+
+def get_response(prompt: str = None, history: list = None, return_history=True, gpt=False, **gpt_config):
+    if prompt == history is None:
+        raise RuntimeError('Either prompt or history should be provided!')
+
+    if history is None:
+        history = []
+
+    if prompt is not None:
+        if not gpt:
+            prompt_dict = {
+                "role": "user",
+                "parts": [prompt]
+            }
+        else:
+            prompt_dict = {
+                "role": "user",
+                "content": prompt
+            }
+
+        history.append(prompt_dict)
+
+    if gpt:
+        print("Getting GPT response...", end=' ')
+        response = openai.chat.completions.create(messages=history, **gpt_config).choices[0].message.content
+        history.append({
+            "role": "assistant",
+            "content": response
+        })
+    else:
+        print("Getting Gemini response...", end=' ')
+        response = MODEL_GEMINI.generate_content(history).text
+        history.append({
+            "role": "model",
+            "parts": [response]
+        })
+
+    print("DONE. (history={})".format(len(history)))
+
+    if return_history:
+        return response, history
+    return response
 
 
 
