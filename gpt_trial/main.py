@@ -13,7 +13,6 @@ HGF_TOKEN = "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"
 PRETRAINED_MODEL_NAME = "pyannote/speaker-diarization-3.1"
 audio_clips_path = Path('./audio_clips').resolve()
 
-WHISPER_MODEL = 'base'
 WHISPER_MODEL = 'large'
 
 GEMINI_API_KEY = 'AIzaSyBhgicqSBzKJZPIQA2w-ahp_7YACYCNBVM'
@@ -244,6 +243,30 @@ def get_response(prompt: str = None, history: list = None, return_history=True, 
     if return_history:
         return response, history
     return response
+
+
+def analyze_video(video_path: str, save_results=True):
+    path = Path(video_path).resolve()
+    audio_path, length, durations = get_durations(path, cuda=True).values()
+    transcripts = get_transcripts(audio_file_path=audio_path, durations=durations, cuda=True)
+    convo_prompt = get_convo_prompt(transcripts, total_audio_duration=f"{length} sec")
+    convo, history = get_response(convo_prompt)
+    score_prompt = SCORE_GEN_CONTEXT
+    score = get_response(score_prompt, history=history, return_history=False)
+
+    if save_results:
+        with open(path.name.replace('.', '_') + '.txt', 'w', encoding='utf-8') as result_file:
+            try:
+                result_file.write("CONVERSATION:\n\n")
+                result_file.write(convo)
+                result_file.write('\n\n------------------------------\n\n')
+                result_file.write("ANALYSIS:\n\n")
+                result_file.write(score)
+                result_file.close()
+            except UnicodeDecodeError as e:
+                print(convo)
+                print(score)
+                print(e.reason, 'from:', e.start, '-', e.end)
 
 
 
