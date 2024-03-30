@@ -68,7 +68,7 @@ def make_dir(dirname: Path = None):
         if not os.path.isdir(dirname):
             print(f"Creating {dirname.name}...", file=sys.stderr, end=' ')
             os.makedirs(dirname, exist_ok=True)
-            print('Done.')
+            print('Done.', file=sys.stderr)
 
 
 def get_audio_meta(video_file_path: Path) -> dict:
@@ -119,8 +119,6 @@ def get_durations(
 
     return {
         **audio_meta,
-        # "path": audio_meta['path'],
-        # "length": audio_meta['length'],
         "durations": [
             (turn.start, turn.end) for turn, _ in diar.itertracks(yield_label=False)
         ]
@@ -128,14 +126,15 @@ def get_durations(
 
 
 def get_subclips(audio_file_path: Path, durations: list) -> list:
-    audio_dir = audio_file_path.absolute().parent
+    audio_dir = audio_file_path.parent
     subclips = []
 
-    clip = AudioFileClip(audio_file_path)
+    clip = AudioFileClip(audio_file_path.as_posix())
     for i, time in enumerate(durations):
         subclip_name = audio_dir / f'subclip_{i}.wav'
         clip.subclip(time[0], time[1]).write_audiofile(subclip_name)
-        subclips.append((time[0], time[1], subclip_name))
+        subclips.append((time[0], time[1], subclip_name.absolute()))
+    clip.close()
 
     return subclips
 
@@ -165,9 +164,8 @@ def get_transcripts(
         model = whisper.load_model(whisper_model, device='cpu')
         print('Whisper model running on CPU.', file=sys.stderr)
 
-    print("Creating Subclips...", end=' ')
+    print("Creating Subclips...")
     subclips = get_subclips(audio_file_path, durations)
-    print('Done.')
 
     transcriptions: list = []
 
