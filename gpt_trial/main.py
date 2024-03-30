@@ -134,6 +134,29 @@ def get_transcripts(
         transcript = model.transcribe(subclip_name)['text']
         transcriptions.append((start, end, transcript))
     print("Done.")
+def get_convo_prompt(transcripts, **kwargs):
+    print("Generating prompt...", end=" ")
+
+    transcript_list = []
+    extra_kws = ''
+    kw_str_list = []
+
+    if kwargs:
+        kw_str_list = [f"{key}: {val}" for key, val in kwargs.items()]
+        extra_kws = '\n'.join(kw_str_list)
+
+    for start, end, text in transcripts:
+        transcript_list.append(
+            TRANSCRIPT_FORMAT.format(start_time=start, end_time=end, text=text)
+        )
+
+    audio_transcript_data = '\n'.join(transcript_list)
+
+    print("DONE. ({lines} lines)".format(
+        lines=len(transcript_list) + len(kw_str_list)
+    ))
+    return CONV_GEN_CONTEXT.format(audio_transcript_data=audio_transcript_data, extra_kws=extra_kws)
+
 
 
 if __name__ == '__main__':
