@@ -1,0 +1,58 @@
+CONVERSATION:
+
+[Interviewer]: Hello sir, good afternoon.
+[Claimant]: Good afternoon, Shrutika.
+[Claimant]: I am good sir. Thank you. How are you?
+[Interviewer]: I'm also doing good. So how is your day today?
+[Claimant]: It's good sir, going good.
+[Interviewer]: Good.
+[Interviewer]: Good to see you. You have logged in before the actual time.
+[Claimant]: Thank you.
+[Interviewer]: So can we start?
+[Claimant]: Yeah, Shruthi guys. Can you just tell me about yourself?
+[Claimant]: My name is Shrutika. I am living at Bowdoin Halle, Bangalore.
+[Claimant]: I have completed my BSc in Life Science from Bangalore University.
+[Interviewer]: Okay.
+[Claimant]: Painting and reading books are my hobbies.
+[Interviewer]: Okay, good.
+[Interviewer]: Tell me about your family background.
+[Claimant]: My family consists of four members. My father who is working as a labourer. My mother, she is a homemaker.
+[Interviewer]: Ok?
+[Claimant]: And I also have my younger brother who's studying in school.
+[Interviewer]: Okay.
+[Interviewer]: Wonderful.
+[Interviewer]: What do you know about our company, Shruthika?
+[Claimant]: ABC Technologies is a BPO sector organization.
+[Claimant]: It is providing non-core technical services to its clients.
+[Claimant]: BPU means Business Process Outsourcing. It is dealing with more than 50 clients across the globe.
+[Claimant]: It also develops its own software so that it can serve customers in a more convenient way.
+[Interviewer]: Okay.
+[Interviewer]: Very good, Shrutika. So what are your career goals?
+[Claimant]: My short term goal is to get a job
+[Claimant]: wherein I can showcase my skills and share my knowledge and also grow in the company.
+[Claimant]: And my long-term goal is to be in a respectable position in that company.
+[Interviewer]: Wonderful.
+[Interviewer]: Any questions for me?
+[Claimant]: Thank you so much, sir, for giving me this opportunity to get interviewed with your company.
+[Claimant]: May I know what is the next step?
+[Interviewer]: Sure, I will share my feedback with the consent team.
+[Interviewer]: and those people will get back to Yushrutika.
+[Claimant]: Okay. Sure. Thank you.
+[Interviewer]: Have a nice evening.
+[Claimant]: Thank you so much, Rithika. Thank you so much for your time. Have a good day.
+
+------------------------------
+
+ANALYSIS:
+
+1. **Average number of words spoken per second by the claimant:** 1.9 words per second
+Reason: The claimant spoke a total of 334 words in 159.5 seconds.
+
+2. **Confidence score for the claimant:** 7/10
+Reason: The claimant speaks in a clear and concise manner, and answers the interviewer's questions directly. The claimant also uses a variety of vocabulary and sentence structures, which indicates that they are comfortable speaking in a professional setting.
+
+3. **Most probable dominant emotion from the text:** Neutral
+Reason: The claimant's tone of voice is mostly neutral throughout the interview. However, there are a few moments where the claimant sounds slightly nervous or hesitant.
+
+4. **Probability score for the claimant committing a fraudulent claim on their policy:** 20%
+Reason: There are no clear indicators in the conversation that suggest the claimant is committing fraud. However, the claimant does not provide a lot of detail about their claim, which could be a red flag.

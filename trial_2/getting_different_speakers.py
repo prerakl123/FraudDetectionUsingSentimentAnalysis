@@ -35,4 +35,5 @@ print("Diarization Elapsed Time:", time.time() - start_time)
 
 # print the result
 for turn, _, speaker in diarization.itertracks(yield_label=True):
-    print(f"start={turn.start:.1f}s stop={turn.end:.1f}s speaker_{speaker}")
+    # print(f"start={turn.start:.1f}s stop={turn.end:.1f}s speaker_{speaker}")
+    print(f"start={turn.start:.1f}s stop={turn.end:.1f}s")

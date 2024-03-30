@@ -1,0 +1,44 @@
+CONVERSATION:
+
+[Interviewer]: Excuse me, sir. May I come in?
+[Claimant]: Please.
+[Interviewer]: Thank you.
+[Interviewer]: Good morning.
+[Interviewer]: Guten Morgen, Sir. Ich bin Shoteka, meine Söhne.
+[Interviewer]: Please have your seat.
+[Claimant]: Thank you.
+[Claimant]: I have stated for ABC technologists.
+[Claimant]: Can you just tell me something about yourself?
+[Claimant]: My name is Shrutika. I come from Bumrunhali, Bangalore.
+[Interviewer]: Okay.
+[Claimant]: I have completed my graduation in life science from Bengaluru University. I read a lot of books written by Sudha Moorthy ma'am and Dr. APJ Abdul Kalam sir. And painting is also one of my hobbies.
+[Interviewer]: Can we?
+[Claimant]: What do you know about your company?
+[Claimant]: ABC Technologies is a BPO sector organization. It's providing non-core technical services to its clients. It's serving more than 50 clients across the globe.
+[Interviewer]: Amazing.
+[Interviewer]: What are your career goals?
+[Claimant]: My short term goal is to get a good job in a reputed company and my long term goal is to be in a reputed position in that company.
+[Interviewer]: Wonderful. What do you know about customer service?
+[Claimant]: Customer service is a facility provided to the customers. It takes care of customer satisfaction.
+[Interviewer]: Thank you.
+[Interviewer]: Do you have any questions for me?
+[Claimant]: Thank you so much, sir, for giving me this opportunity to get interviewed at your company. May I know what is the next step?
+[Interviewer]: Sure, I will share my feedback with the concerned people and they will get in touch with you.
+[Claimant]: Sure, sir. Thank you. Have a nice day. Thank you so much. You too.
+[Interviewer]: Thank you so much, you too. Same here. Thank you so much.
+
+------------------------------
+
+ANALYSIS:
+
+1. **Average number of words spoken per second by the claimant:** 2.1 words per second
+Reason: The claimant spoke a total of 350 words in 166.3 seconds. 350 words / 166.3 seconds = 2.1 words per second.
+
+2. **Confidence score for the claimant:** 75%
+Reason: The claimant speaks clearly and concisely, and their answers are well-thought-out and articulate. They also maintain a good pace and volume throughout the interview.
+
+3. **Most probable dominant emotion from the text:** Confidence
+Reason: The claimant expresses confidence in their abilities and qualifications throughout the interview. They also speak with a positive tone and maintain a good eye contact with the interviewer.
+
+4. **Probability score for the claimant committing a fraudulent claim:** 10%
+Reason: There are no red flags in the claimant's speech or behavior that would indicate they are committing a fraudulent claim. They are honest and forthcoming with their answers, and they provide clear and concise information about their experience and qualifications.

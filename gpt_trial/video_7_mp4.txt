@@ -1,0 +1,51 @@
+CONVERSATION:
+
+[Interviewer]: Hello, good morning. My name is Shaini. I am the HR Executive at ABC Technologies. Am I speaking with Shrutika?
+[Claimant]: Yes ma'am, good morning.
+[Interviewer]: This call is regarding your interview for a customer service representative. Is this a good time to talk?
+[Claimant]: Absolutely.
+[Interviewer]: Okay. Please introduce yourself.
+[Claimant]: My name is Shrutika. I am living in Bomanhali, Bangalore. I have completed my B.Sc from Bengaluru University
+[Interviewer]: Okay.
+[Claimant]: My hobbies are reading books and painting.
+[Interviewer]: Okay. Can you tell me something about your family?
+[Claimant]: My family consists of four members including me
+[Claimant]: My father is a laborer, my mother is a homemaker and I have a younger brother who is studying in school.
+[Claimant]: I have an anger.
+[Claimant]: occhi
+[Interviewer]: What are your strengths and weaknesses?
+[Claimant]: I am honest, self-motivated and hardworking with a positive attitude towards my life and career.
+[Claimant]: When it comes to my weakness, I can't say no to anyone who will ask any help from me.
+[Interviewer]: Okay, great. Why should I hire you, Trutika?
+[Claimant]: As I am a fresher, I have theoretical knowledge But I can put all my efforts and do my best, give my best to the company
+[Claimant]: I can also work hard to fulfill all the expectations set by the company.
+[Interviewer]: Okay. Why did you join ICICI Academy for Skills?
+[Claimant]: ICC Academy for Skills has given me a good platform to get myself trained and also is helping me get a job.
+[Interviewer]: Okay. What are your salary expectations?
+[Claimant]: As I'm a fresher
+[Claimant]: Salary is not my first priority
+[Claimant]: I want to get skills
+[Claimant]: I want to have experience so as per company norms is okay with me.
+[Interviewer]: Okay, do you have any question for me?
+[Claimant]: Thank you so much ma'am for giving me this opportunity. May I know what is the next step?
+[Interviewer]: You are welcome. I will share the feedback
+[Interviewer]: And did you know?
+[Claimant]: Okay, thank you.
+[Interviewer]: Thank you. Have a great day ahead.
+[Claimant]: You too have a nice day. Bye. Bye.
+
+------------------------------
+
+ANALYSIS:
+
+1. **Average number of words spoken per second by the claimant:** 1.8 words per second
+Reason: The claimant spoke a total of 322 words in 192.03 seconds. 322 words / 192.03 seconds = 1.8 words per second.
+
+2. **Confidence score for the claimant:** 7/10
+Reason: The claimant speaks clearly and fluently, and answers the interviewer's questions directly. The claimant also uses a variety of vocabulary and sentence structures, which indicates that they are comfortable speaking in a professional setting. However, the claimant does hesitate and make some grammatical errors, which suggests that they may not be completely confident in their answers.
+
+3. **Most probable dominant emotion from the text:** Nervousness
+Reason: The claimant uses a lot of hesitant language, such as "um" and "like," and they often pause before answering the interviewer's questions. This suggests that the claimant may be feeling nervous or anxious about the interview.
+
+4. **Probability score as to how likely the claimant is committing a fraudulent claim on their policy:** 20%
+Reason: There are no clear indicators of fraud in the claimant's speech. The claimant answers the interviewer's questions directly and honestly, and they do not provide any information that is inconsistent with their claim. However, the claimant does make some vague and general statements, which could be an indication of fraud.
