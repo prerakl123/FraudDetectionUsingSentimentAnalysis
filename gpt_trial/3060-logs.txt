@@ -1,0 +1,437 @@
+(venv) PS C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial> python main.py
+Extracting Audio from: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/videos/video_7.mp4
+MoviePy - Writing audio in C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/audio.wav
+MoviePy - Done.
+Saved audio to: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/audio.wav
+Initializing model: pyannote/speaker-diarization-3.1
+Setting CUDA=1. Using device: NVIDIA GeForce RTX 3060 Laptop GPU
+Running Diarization... Done.
+Using default whisper model: large
+Setting CUDA=1. Using device: NVIDIA GeForce RTX 3060 Laptop GPU
+Creating Subclips...
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_0.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_1.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_2.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_3.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_4.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_5.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_6.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_7.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_8.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_9.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_10.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_11.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_12.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_13.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_14.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_15.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_16.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_17.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_18.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_19.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_20.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_21.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_22.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_23.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_24.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_25.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_26.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_27.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_28.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_29.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_30.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_31.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_32.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_33.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_34.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_35.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_36.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_37.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_38.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_39.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_40.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_41.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_42.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_7_mp4\subclip_43.wav
+MoviePy - Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_0.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_1.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_2.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_3.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_4.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_5.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_6.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_7.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_8.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_9.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_10.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_11.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_12.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_13.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_14.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_15.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_16.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_17.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_18.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_19.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_20.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_21.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_22.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_23.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_24.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_25.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_26.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_27.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_28.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_29.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_30.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_31.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_32.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_33.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_34.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_35.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_36.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_37.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_38.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_39.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_40.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_41.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_42.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_7_mp4/subclip_43.wav. Done.
+Transcribing text... Generating prompt... DONE. (45 lines)
+Getting Gemini response... DONE. (history=2)
+Getting Gemini response... DONE. (history=4)
+Extracting Audio from: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/videos/video_6.mp4
+MoviePy - Writing audio in C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/audio.wav
+MoviePy - Done.
+Saved audio to: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/audio.wav
+Initializing model: pyannote/speaker-diarization-3.1
+Setting CUDA=1. Using device: NVIDIA GeForce RTX 3060 Laptop GPU
+Running Diarization... Done.
+Using default whisper model: large
+Setting CUDA=1. Using device: NVIDIA GeForce RTX 3060 Laptop GPU
+Creating Subclips...
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_0.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_1.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_2.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_3.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_4.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_5.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_6.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_7.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_8.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_9.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_10.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_11.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_12.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_13.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_14.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_15.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_16.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_17.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_18.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_19.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_20.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_21.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_22.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_23.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_24.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_25.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_26.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_27.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_28.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_29.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_30.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_31.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_32.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_33.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_34.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_35.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_36.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_37.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_38.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_39.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_40.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_41.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_42.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_43.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_44.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_45.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_46.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_6_mp4\subclip_47.wav
+MoviePy - Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_0.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_1.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_2.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_3.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_4.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_5.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_6.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_7.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_8.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_9.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_10.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_11.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_12.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_13.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_14.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_15.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_16.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_17.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_18.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_19.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_20.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_21.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_22.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_23.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_24.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_25.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_26.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_27.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_28.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_29.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_30.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_31.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_32.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_33.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_34.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_35.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_36.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_37.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_38.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_39.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_40.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_41.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_42.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_43.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_44.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_45.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_46.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_6_mp4/subclip_47.wav. Done.
+Transcribing text... Generating prompt... DONE. (49 lines)
+Getting Gemini response... DONE. (history=2)
+Getting Gemini response... DONE. (history=4)
+Extracting Audio from: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/videos/video_5.mp4
+MoviePy - Writing audio in C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/audio.wav
+MoviePy - Done.
+Saved audio to: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/audio.wav
+Initializing model: pyannote/speaker-diarization-3.1
+Setting CUDA=1. Using device: NVIDIA GeForce RTX 3060 Laptop GPU
+Running Diarization... Done.
+Using default whisper model: large
+Setting CUDA=1. Using device: NVIDIA GeForce RTX 3060 Laptop GPU
+Creating Subclips...
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_0.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_1.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_2.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_3.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_4.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_5.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_6.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_7.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_8.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_9.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_10.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_11.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_12.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_13.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_14.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_15.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_16.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_17.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_18.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_19.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_20.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_21.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_22.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_23.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_24.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_25.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_26.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_27.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_28.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_29.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_30.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_31.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_32.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_33.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_34.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_35.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_36.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_37.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_38.wav
+MoviePy - Done.
+MoviePy - Writing audio in C:\Users\Prerak\PycharmProjects\FraudDetectionUsingSentimentAnalysis\gpt_trial\audio_clips\video_5_mp4\subclip_39.wav
+MoviePy - Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_0.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_1.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_2.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_3.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_4.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_5.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_6.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_7.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_8.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_9.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_10.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_11.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_12.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_13.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_14.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_15.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_16.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_17.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_18.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_19.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_20.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_21.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_22.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_23.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_24.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_25.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_26.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_27.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_28.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_29.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_30.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_31.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_32.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_33.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_34.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_35.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_36.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_37.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_38.wav. Done.
+Transcribing...: C:/Users/Prerak/PycharmProjects/FraudDetectionUsingSentimentAnalysis/gpt_trial/audio_clips/video_5_mp4/subclip_39.wav. Done.
+Transcribing text... Generating prompt... DONE. (41 lines)
+Getting Gemini response... DONE. (history=2)
+Getting Gemini response... DONE. (history=4)
+{'../videos/video_5.mp4': 598.1613574028015, '../videos/video_6.mp4': 942.4039857387543, '../videos/video_7.mp4': 659.98237657547}

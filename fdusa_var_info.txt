@@ -27,4 +27,7 @@ List of variables:
 
 
 4. Text (from the transcribed text):
-	-
+	- positive
+	- negative
+	- neutral
+	- compound
