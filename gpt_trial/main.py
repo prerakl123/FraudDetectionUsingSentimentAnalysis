@@ -9,6 +9,9 @@ import whisper
 from moviepy.audio.io.AudioFileClip import AudioFileClip
 from pyannote.audio import Pipeline
 
+import time
+from pprint import pprint
+
 HGF_TOKEN = "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"
 PRETRAINED_MODEL_NAME = "pyannote/speaker-diarization-3.1"
 audio_clips_path = Path('./audio_clips').resolve()
@@ -269,9 +272,26 @@ def analyze_video(video_path: str, save_results=True):
                 print(e.reason, 'from:', e.start, '-', e.end)
 
 
+def main():
+    # # from pprint import pprint
+    #
+    # path = Path('../videos/video_7.mp4').resolve()
+    # tr = get_transcripts(video_file_path=path, whisper_model='medium', cuda=True)
+    # # pprint(tr, width=150, depth=2, indent=2)
+    # print(make_prompt(tr))
+
+    # analyze_video('../videos/video_5.mp4')
+
+    ana_times = {}
+
+    videos = ['../videos/video_7.mp4', '../videos/video_6.mp4', '../videos/video_5.mp4']
+    for video in videos:
+        start_time = time.time()
+        analyze_video(video)
+        ana_times[video] = time.time() - start_time
+
+    pprint(ana_times, width=150, depth=4, indent=4)
+
 
 if __name__ == '__main__':
-    from pprint import pprint
-
-    path = Path('../videos/video_7.mp4').resolve()
-    pprint(get_durations(path, cuda=True))
+    main()
