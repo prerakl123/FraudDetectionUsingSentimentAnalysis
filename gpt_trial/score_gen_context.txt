@@ -1,0 +1,10 @@
+Based on the above conversation:
+1. Analyze the average number of words spoken per second by the claimant using the previously provided time periods.
+NOTE: The average person speaks at a rate of 125–150 words per minute (wpm), which is about 2.5 words per second. This rate is considered normal.
+2. Generate a confidence score for the claimant as to how confident the claimant sounds in the transcripts.
+3. Analyze the most probable dominant emotion from the text.
+4. Generate a probability score, as to how likely the claimant is committing a fraudulent claim on their policy.
+
+Avoid any extra formatting (like ** for bold, ``` for code blocks, etc). Generate your output in the following format:
+[Number]: [Output]
+Reason: [Reasons behind that output]
