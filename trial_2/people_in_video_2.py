@@ -95,12 +95,12 @@ from fer import FER
 from fer import Video
 
 start_time = time.time()
-emotion_detector = FER(mtcnn=True, min_neighbors=6, min_face_size=100)
-path_to_video = "./videos/video_7.mp4"
+emotion_detector = FER(min_neighbors=6, min_face_size=100)
+path_to_video = "../videos/video_6.mp4"
 video = Video(path_to_video)
-result = video.analyze(emotion_detector, annotate_frames=False)
-video.first_face_only = False
+result = video.analyze(emotion_detector, annotate_frames=True)
+video.first_face_only = True
 emotions_df = video.to_pandas(result)
-video.to_csv(result, "deleteme.csv")
+video.to_csv(result, "fer-video_6-output.csv")
 print(emotions_df)
 print(time.time() - start_time)
